@@ -7,7 +7,10 @@ export const RQSuperHeroesPage = () => {
   };
   const { data, isLoading, isError, error } = useQuery(
     "super-heroes",
-    fetchSuperHeroes
+    fetchSuperHeroes,
+    {
+      staleTime: 30000, //Stops refetching data for the specified time. In this case 30s since the initial request was sent.
+    }
   );
 
   if (isLoading) {
