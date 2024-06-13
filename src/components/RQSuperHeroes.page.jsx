@@ -7,7 +7,11 @@ export const RQSuperHeroesPage = () => {
   };
   const { data, isLoading, isError, error } = useQuery(
     "super-heroes",
-    fetchSuperHeroes
+    fetchSuperHeroes,
+    {
+      refetchInterval: 2000, // Refetch data every 2 seconds
+      refetchIntervalInBackground: true, // Refetch data even if the window is not in focus
+    }
   );
 
   if (isLoading) {
