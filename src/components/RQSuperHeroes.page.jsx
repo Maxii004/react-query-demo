@@ -9,7 +9,7 @@ export const RQSuperHeroesPage = () => {
     "super-heroes",
     fetchSuperHeroes,
     {
-      staleTime: 30000, //Stops refetching data for the specified time. In this case 30s since the initial request was sent.
+      staleTime: 30000, //Stops refetching data for the specified time. In this case 30s since the initial request was sent. Default is 0s
     }
   );
 
