@@ -1,0 +1,64 @@
+{
+  "superheroes": [
+    {
+      "id": 1,
+      "name": "Batman",
+      "alterEgo": "Bruce Wayne",
+      "city": "Gotham"
+    },
+    {
+      "id": 2,
+      "name": "Superman",
+      "alterEgo": "Clark Kent",
+      "city": "Metropolis"
+    },
+    {
+      "id": 3,
+      "name": "Spiderman",
+      "alterEgo": "Peter Parker",
+      "city": "Queens"
+    },
+    {
+      "id": 4,
+      "name": "Ironman",
+      "alterEgo": "Tony Stark",
+      "city": "New York"
+    },
+    {
+      "id": 5,
+      "name": "Wonder Woman",
+      "alterEgo": "Princess Diana",
+      "city": "Themyscira"
+    },
+    {
+      "id": 6,
+      "name": "Captain America",
+      "alterEgo": "Steve Rogers",
+      "city": "Brooklyn"
+    },
+    {
+      "id": 7,
+      "name": "Black Widow",
+      "alterEgo": "Natasha Romanoff",
+      "city": "Stalingrad"
+    },
+    {
+      "id": 8,
+      "name": "Hulk",
+      "alterEgo": "Bruce Banner",
+      "city": "Dayton"
+    },
+    {
+      "id": 9,
+      "name": "Thor",
+      "alterEgo": "Thor Odinson",
+      "city": "Asgard"
+    },
+    {
+      "id": 10,
+      "name": "Black Panther",
+      "alterEgo": "T'Challa",
+      "city": "Wakanda"
+    }
+  ]
+}
