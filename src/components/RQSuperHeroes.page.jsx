@@ -7,7 +7,11 @@ export const RQSuperHeroesPage = () => {
   };
   const { data, isLoading, isError, error } = useQuery(
     "super-heroes",
-    fetchSuperHeroes
+    fetchSuperHeroes,
+    {
+      refetchOnMount: false, //By default is true, if data is stale there will be a refetch request when the component is mounted. true | false | 'always'
+      refetchOnWindowFocus: false, //By default is true, refetches data when the window is focused. No need to refresh the window. true | false | 'always'
+    }
   );
 
   if (isLoading) {
