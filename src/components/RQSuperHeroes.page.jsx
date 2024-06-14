@@ -5,9 +5,19 @@ export const RQSuperHeroesPage = () => {
   const fetchSuperHeroes = () => {
     return axios.get("http://localhost:4000/superheroes");
   };
+  const onSuccess = () => {
+    console.log("Data fetched successfully");
+  };
+  const onError = (error) => {
+    console.log("Error fetching data: ", error);
+  };
   const { data, isLoading, isError, error } = useQuery(
     "super-heroes",
-    fetchSuperHeroes
+    fetchSuperHeroes,
+    {
+      onSuccess: onSuccess,
+      onError: onError,
+    }
   );
 
   if (isLoading) {
