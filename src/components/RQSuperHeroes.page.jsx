@@ -7,7 +7,13 @@ export const RQSuperHeroesPage = () => {
   };
   const { data, isLoading, isError, error } = useQuery(
     "super-heroes",
-    fetchSuperHeroes
+    fetchSuperHeroes,
+    {
+      select: (data) => {
+        const superHeroNames = data?.data.map((hero) => hero.name);
+        return superHeroNames;
+      },
+    }
   );
 
   if (isLoading) {
@@ -22,8 +28,8 @@ export const RQSuperHeroesPage = () => {
     <div>
       <h1>RQ Super Heroes Page</h1>
       <ul>
-        {data?.data.map((hero) => (
-          <li key={hero.id}>{hero.name}</li>
+        {data?.map((heroName) => (
+          <li key={heroName}>{heroName}</li>
         ))}
       </ul>
     </div>
